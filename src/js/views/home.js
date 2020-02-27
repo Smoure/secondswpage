@@ -1,15 +1,52 @@
-import React from "react";
-import rigoImage from "../../img/rigo-baby.jpg";
+import React, { useState, useEffect } from "react";
+import { Card } from "../component/card";
+import { Jumbotron } from "../component/jumbotron";
 import "../../styles/home.scss";
+import { Link } from "react-router-dom";
 
-export const Home = () => (
-	<div className="text-center mt-5">
-		<h1>Hello Rigo!</h1>
-		<p>
-			<img src={rigoImage} />
-		</p>
-		<a href="#" className="btn btn-success">
-			If you see this green button, bootstrap is working
-		</a>
-	</div>
-);
+export function Home() {
+	const [species, setSpecies] = useState([]);
+
+	useEffect(() => {
+		fetch("https://swapi.co/api/species/")
+			.then(resp => resp.json())
+			.then(data => {
+				console.log(data);
+				setSpecies(data.results);
+			});
+	}, []);
+
+	return (
+		<>
+			<Jumbotron />
+			<div className="card-group justify-content-around ">
+				{species.map((item, here) => {
+					return (
+						<Card
+							key={index}
+							name={item.name}
+							classification={item.classification}
+							designation={item.designation}
+							avg_height={item.average_height}
+							skin_colors={item.skin_colors}
+							hair_colors={item.hair_colors}
+							eye_colors={item.eye_colors}
+							avg_lifespan={item.average_lifespan}
+							homeworld={item.homeworld}
+							language={item.language}
+							people={item.people}
+							films={item.films}
+							created={item.created}
+							edited={item.edited}
+							url={item.url}
+							link={here + 1}
+						/>
+					);
+				})}
+			</div>
+			<Link to={"/single/" + index} className="btn btn-warning">
+				Learn More!
+			</Link>
+		</>
+	);
+}
