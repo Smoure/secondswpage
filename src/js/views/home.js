@@ -23,7 +23,7 @@ export function Home() {
 				{species.map((item, here) => {
 					return (
 						<Card
-							key={index}
+							key={here}
 							name={item.name}
 							classification={item.classification}
 							designation={item.designation}
@@ -44,9 +44,6 @@ export function Home() {
 					);
 				})}
 			</div>
-			<Link to={"/single/" + index} className="btn btn-warning">
-				Learn More!
-			</Link>
 		</>
 	);
 }

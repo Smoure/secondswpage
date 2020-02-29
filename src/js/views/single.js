@@ -5,6 +5,7 @@ import { Context } from "../store/appContext";
 
 export const Single = props => {
 	const { store, actions } = useContext(Context);
+	const [species, setSpecies] = useState([]);
 	useEffect(() => {
 		fetch("https://swapi.co/api/species/" + props.match.params.anything)
 			.then(resp => resp.json())
@@ -13,13 +14,25 @@ export const Single = props => {
 				setSpecies(data.results);
 			});
 	}, []);
+
+	// let classification = store.demo[props.match.params.index].classification;
+	// let designation = store.demo[props.match.params.index].designation
+	// let avg_height = store.demo[props.match.params.index].classification
+	// let classification = store.demo[props.match.params.index].classification
+	// let classification = store.demo[props.match.params.index].classification
+	// let classification = store.demo[props.match.params.index].classification
+	// let classification = store.demo[props.match.params.index].classification
+	// let classification = store.demo[props.match.params.index].classification
+	// let classification = store.demo[props.match.params.index].classification
+	console.log(species.name);
+
 	return (
 		<div className="card" style={{ width: "200px" }}>
 			<img src="..." className="card-img-top" alt="..." />
-			{store.demo[props.match.params.anything].map((item, index) => {
+			{store.demo.map((item, index) => {
 				return (
 					<>
-						<div className="card-body">
+						<div className="card-body" key={index}>
 							<h5 className="card-title">{props.name}</h5>
 						</div>
 						<ul className="list-group list-group-flush">
@@ -39,12 +52,18 @@ export const Single = props => {
 							<li className="list-group-item">URL: {props.url}</li>
 						</ul>
 						<div className="card-body">
-							<a href="#" className="card-link">
+							{/* <a href="#" className="card-link">
 								Card link
-							</a>
-							<a href="#" className="card-link">
+							</a> */}
+
+							{/* <button type="button" className="btn btn-warning">
+								<Link to={"/single/" + here} className="btn btn-warning">
+									Learn More!
+								</Link>
+							</button> */}
+							{/* <a href="#" className="card-link">
 								Another link
-							</a>
+							</a> */}
 						</div>
 					</>
 				);
@@ -54,7 +73,7 @@ export const Single = props => {
 };
 
 Single.propTypes = {
-	// match: PropTypes.object
+	match: PropTypes.object,
 	name: PropTypes.string,
 	classification: PropTypes.string,
 	designation: PropTypes.string,
@@ -76,3 +95,20 @@ Single.propTypes = {
 // 	<h1 className="display-4">This will show the demo element: {store.demo[props.match.params.theid].title}</h1>
 
 // </div>
+// {store.demo[props.match.params.anything].map((item, index)
+{
+	/* <li className="list-group-item">Classification: {props.classification}</li>
+							<li className="list-group-item">Designation: {props.designation}</li>
+							<li className="list-group-item">Average Height: {props.avg_height}</li>
+							<li className="list-group-item">Skin Colors: {props.skin_colors}</li>
+							<li className="list-group-item">Hair Colors: {props.hair_colors}</li>
+							<li className="list-group-item">Eye Colors: {props.eye_colors}</li>
+							<li className="list-group-item">Average Lifespan: {props.avg_lifespan}</li>
+							<li className="list-group-item">Homeworld: {props.homeworld}</li>
+							<li className="list-group-item">Language: {props.language}</li>
+							<li className="list-group-item">People: {props.people}</li>
+							<li className="list-group-item">Films: {props.films}</li>
+							<li className="list-group-item">Created: {props.created}</li>
+							<li className="list-group-item">Edited: {props.edited}</li>
+							<li className="list-group-item">URL: {props.url}</li> */
+}
