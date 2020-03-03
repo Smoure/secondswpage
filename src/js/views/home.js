@@ -25,21 +25,21 @@ export function Home() {
 						<Card
 							key={here}
 							name={item.name}
-							classification={item.classification}
-							designation={item.designation}
-							avg_height={item.average_height}
-							skin_colors={item.skin_colors}
-							hair_colors={item.hair_colors}
-							eye_colors={item.eye_colors}
-							avg_lifespan={item.average_lifespan}
-							homeworld={item.homeworld}
-							language={item.language}
-							people={item.people}
-							films={item.films}
-							created={item.created}
-							edited={item.edited}
-							url={item.url}
-							link={here + 1}
+							// classification={item.classification}
+							// designation={item.designation}
+							// avg_height={item.average_height}
+							// skin_colors={item.skin_colors}
+							// hair_colors={item.hair_colors}
+							// eye_colors={item.eye_colors}
+							// avg_lifespan={item.average_lifespan}
+							// homeworld={item.homeworld}
+							// language={item.language}
+							// people={item.people}
+							// films={item.films}
+							// created={item.created}
+							// edited={item.edited}
+							// url={item.url}
+							link={here}
 						/>
 					);
 				})}

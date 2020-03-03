@@ -182,6 +182,54 @@ const getState = ({ getStore, getActions, setStore }) => {
 					edited: "2014-12-20T21:36:42.167000Z",
 					url: "https://swapi.co/api/species/14/"
 				}
+			],
+			pictures: [
+				{
+					name: "Hutt",
+					img: "https://static.wikia.nocookie.net/17453500-880f-4bd7-a5af-cb8395f32608"
+				},
+				{
+					name: "Yoda",
+					img:
+						"https://vignette.wikia.nocookie.net/starwars/images/5/5a/YodaNEGAS.jpg/revision/latest?cb=20061129202540"
+				},
+				{
+					name: "Trandoshan",
+					img:
+						"https://vignette.wikia.nocookie.net/starwars/images/4/45/Trandoshan_NEGAS.png/revision/latest?cb=20130115031110"
+				},
+				{
+					name: "Mon Calamari",
+					img: "https://i.pinimg.com/originals/30/a3/ba/30a3badcdf96d36b65cb6966abb912e6.jpg"
+				},
+				{
+					name: "Ewok",
+					img: "https://i.pinimg.com/originals/82/c4/c9/82c4c93bcc899b9272d7c3a51c2e8efa.jpg"
+				},
+				{
+					name: "Sullustan",
+					img:
+						"https://vignette.wikia.nocookie.net/starwars/images/3/31/SullustanJedi-SWGTCGCF.jpg/revision/latest?cb=20111224042458"
+				},
+				{
+					name: "Neimodian",
+					img:
+						"https://vignette.wikia.nocookie.net/starwars/images/5/52/Neimoidian_NEGAS.jpg/revision/latest?cb=20061021200803"
+				},
+				{
+					name: "Gungan",
+					img:
+						"https://vignette.wikia.nocookie.net/starwars/images/3/31/Gungan_NEGAS.jpg/revision/latest?cb=20070225162243"
+				},
+				{
+					name: "Toydarian",
+					img:
+						"https://vignette.wikia.nocookie.net/starwars/images/8/89/Watto-Hasbro.jpg/revision/latest/top-crop/width/360/height/450?cb=20100816180240"
+				},
+				{
+					name: "Dug",
+					img: "https://i.pinimg.com/originals/72/ea/74/72ea7447dc43531de6aafac2d845fc03.jpg"
+				}
 			]
 		},
 		actions: {

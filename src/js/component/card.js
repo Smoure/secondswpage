@@ -4,12 +4,15 @@ import { Link } from "react-router-dom";
 
 export function Card(props) {
 	return (
-		<div className="mb-3 mx-2 border border-warning bg-light text-dark rounded" style={{ width: "500px" }}>
+		<div
+			id="hpcard"
+			className="mb-3 mx-2 border border-warning bg-light text-dark rounded"
+			style={{ width: "500px" }}>
 			<div className="card-body">
 				<h5 className="card-title">
 					Species Name: <strong>{props.name}</strong>
 				</h5>
-				<p className="card-text">
+				{/* <p className="card-text">
 					<strong>Classification: </strong>
 					{props.classification}
 				</p>
@@ -47,7 +50,9 @@ export function Card(props) {
 				</p>
 				<p className="card-text">
 					<strong>People: </strong>
-					{props.people}
+					{props.people.map((item, index) => {
+						return <div key={index}>{item}</div>;
+					})}
 				</p>
 				<p className="card-text">
 					<strong>Films: </strong>
@@ -66,8 +71,8 @@ export function Card(props) {
 				<p className="card-text">
 					<strong>URL: </strong>
 					{props.url}
-				</p>
-				<Link to={"/single/" + props.link} className="btn btn-warning">
+				</p> */}
+				<Link to={"/single/" + props.link} className="btn btn-warning d-flex justify-content-end">
 					Learn More!
 				</Link>
 			</div>
