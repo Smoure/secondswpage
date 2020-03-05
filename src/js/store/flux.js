@@ -17,7 +17,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 					films: ["https://swapi.co/api/films/3/", "https://swapi.co/api/films/1/"],
 					created: "2014-12-10T17:12:50.410000Z",
 					edited: "2014-12-20T21:36:42.146000Z",
-					url: "https://swapi.co/api/species/5/"
+					url: "https://swapi.co/api/species/5/",
+					image: "https://static.wikia.nocookie.net/17453500-880f-4bd7-a5af-cb8395f32608"
 				},
 				{
 					name: "Yoda's species",
@@ -40,7 +41,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 					],
 					created: "2014-12-15T12:27:22.877000Z",
 					edited: "2014-12-20T21:36:42.148000Z",
-					url: "https://swapi.co/api/species/6/"
+					url: "https://swapi.co/api/species/6/",
+					image:
+						"https://vignette.wikia.nocookie.net/starwars/images/5/5a/YodaNEGAS.jpg/revision/latest?cb=20061129202540"
 				},
 				{
 					name: "Trandoshan",
@@ -57,7 +60,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 					films: ["https://swapi.co/api/films/2/"],
 					created: "2014-12-15T13:07:47.704000Z",
 					edited: "2014-12-20T21:36:42.151000Z",
-					url: "https://swapi.co/api/species/7/"
+					url: "https://swapi.co/api/species/7/",
+					image:
+						"https://vignette.wikia.nocookie.net/starwars/images/4/45/Trandoshan_NEGAS.png/revision/latest?cb=20130115031110"
 				},
 				{
 					name: "Mon Calamari",
@@ -74,7 +79,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 					films: ["https://swapi.co/api/films/3/"],
 					created: "2014-12-18T11:09:52.263000Z",
 					edited: "2014-12-20T21:36:42.153000Z",
-					url: "https://swapi.co/api/species/8/"
+					url: "https://swapi.co/api/species/8/",
+					image: "https://i.pinimg.com/originals/30/a3/ba/30a3badcdf96d36b65cb6966abb912e6.jpg"
 				},
 				{
 					name: "Ewok",
@@ -91,7 +97,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 					films: ["https://swapi.co/api/films/3/"],
 					created: "2014-12-18T11:22:00.285000Z",
 					edited: "2014-12-20T21:36:42.155000Z",
-					url: "https://swapi.co/api/species/9/"
+					url: "https://swapi.co/api/species/9/",
+					image: "https://i.pinimg.com/originals/82/c4/c9/82c4c93bcc899b9272d7c3a51c2e8efa.jpg"
 				},
 				{
 					name: "Sullustan",
@@ -108,7 +115,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 					films: ["https://swapi.co/api/films/3/"],
 					created: "2014-12-18T11:26:20.103000Z",
 					edited: "2014-12-20T21:36:42.157000Z",
-					url: "https://swapi.co/api/species/10/"
+					url: "https://swapi.co/api/species/10/",
+					image:
+						"https://vignette.wikia.nocookie.net/starwars/images/3/31/SullustanJedi-SWGTCGCF.jpg/revision/latest?cb=20111224042458"
 				},
 				{
 					name: "Neimodian",
@@ -125,7 +134,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 					films: ["https://swapi.co/api/films/4/"],
 					created: "2014-12-19T17:07:31.319000Z",
 					edited: "2014-12-20T21:36:42.160000Z",
-					url: "https://swapi.co/api/species/11/"
+					url: "https://swapi.co/api/species/11/",
+					image:
+						"https://vignette.wikia.nocookie.net/starwars/images/5/52/Neimoidian_NEGAS.jpg/revision/latest?cb=20061021200803"
 				},
 				{
 					name: "Gungan",
@@ -146,7 +157,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 					films: ["https://swapi.co/api/films/5/", "https://swapi.co/api/films/4/"],
 					created: "2014-12-19T17:30:37.341000Z",
 					edited: "2014-12-20T21:36:42.163000Z",
-					url: "https://swapi.co/api/species/12/"
+					url: "https://swapi.co/api/species/12/",
+					image:
+						"https://vignette.wikia.nocookie.net/starwars/images/3/31/Gungan_NEGAS.jpg/revision/latest?cb=20070225162243"
 				},
 				{
 					name: "Toydarian",
@@ -163,7 +176,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 					films: ["https://swapi.co/api/films/5/", "https://swapi.co/api/films/4/"],
 					created: "2014-12-19T17:48:56.893000Z",
 					edited: "2014-12-20T21:36:42.165000Z",
-					url: "https://swapi.co/api/species/13/"
+					url: "https://swapi.co/api/species/13/",
+					image:
+						"https://vignette.wikia.nocookie.net/starwars/images/8/89/Watto-Hasbro.jpg/revision/latest/top-crop/width/360/height/450?cb=20100816180240"
 				},
 				{
 					name: "Dug",
@@ -180,7 +195,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 					films: ["https://swapi.co/api/films/4/"],
 					created: "2014-12-19T17:53:11.214000Z",
 					edited: "2014-12-20T21:36:42.167000Z",
-					url: "https://swapi.co/api/species/14/"
+					url: "https://swapi.co/api/species/14/",
+					image: "https://i.pinimg.com/originals/72/ea/74/72ea7447dc43531de6aafac2d845fc03.jpg"
 				}
 			],
 			pictures: [

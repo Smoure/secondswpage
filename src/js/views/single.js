@@ -44,7 +44,7 @@ export const Single = props => {
 			<div className="container p-5">
 				<div
 					id="hpcard"
-					className="mb-3 mx-2 border border-warning bg-light text-dark rounded"
+					className="mb-3 mx-2 border border-dark bg-light text-dark rounded"
 					style={{ width: "700px" }}>
 					<div className="card">
 						<img src={store.pictures[props.match.params.theid].img} className="card-img-top" alt="..." />
@@ -110,15 +110,35 @@ export const Single = props => {
                                     Another link
                                 </a> */}
 							<div className="d-flex justify-content-between">
-								<Link to={"/"} className="btn btn-warning p-2 m-2 ">
-									Back to Home
-								</Link>
+								<div className="p-2">
+									{Number(props.match.params.theid) >= 1 ? (
+										<Link
+											to={"/single/" + Number(props.match.params.theid - 1)}
+											className="btn btn-success p-2 m-2">
+											{"<<"} Previous Species
+										</Link>
+									) : (
+										""
+									)}
+								</div>
 
-								<Link
-									to={"/single/" + (Number(props.match.params.theid) + 1)}
-									className="btn btn-info p-2 m-2">
-									Next Species {">>"}
-								</Link>
+								<div className="p-2">
+									<Link to={"/"} className="btn btn-warning p-2 m-2 ">
+										Back to Home
+									</Link>
+								</div>
+
+								<div className="p-2">
+									{Number(props.match.params.theid) >= store.demo.length - 1 ? (
+										""
+									) : (
+										<Link
+											to={"/single/" + (Number(props.match.params.theid) + 1)}
+											className="btn btn-info p-2 m-2">
+											Next Species {">>"}
+										</Link>
+									)}
+								</div>
 							</div>
 						</div>
 					</div>

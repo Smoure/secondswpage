@@ -1,11 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Card } from "../component/card";
 import { Jumbotron } from "../component/jumbotron";
+
 import "../../styles/home.scss";
 import { Link } from "react-router-dom";
+import { Context } from "../store/appContext";
 
 export function Home() {
 	const [species, setSpecies] = useState([]);
+	const { store, actions } = useContext(Context);
 
 	useEffect(() => {
 		fetch("https://swapi.co/api/species/")

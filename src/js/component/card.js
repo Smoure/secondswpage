@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useState, useEffect, useContext } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import { Context } from "../store/appContext";
 
 export function Card(props) {
+	const { store, actions } = useContext(Context);
+
 	return (
-		<div
-			id="hpcard"
-			className="mb-3 mx-2 border border-warning bg-light text-dark rounded"
-			style={{ width: "500px" }}>
+		<div id="hpcard" className="mb-3 mx-2 border border-dark bg-light text-dark rounded" style={{ width: "500px" }}>
+			{/* <img src={props.img} className="card-img-top" alt="..." /> */}
 			<div className="card-body">
 				<h5 className="card-title">
 					Species Name: <strong>{props.name}</strong>
@@ -73,7 +74,7 @@ export function Card(props) {
 					{props.url}
 				</p> */}
 				<Link to={"/single/" + props.link} className="btn btn-warning d-flex justify-content-end">
-					Learn More!
+					<strong>Learn More</strong>
 				</Link>
 			</div>
 		</div>
@@ -96,5 +97,7 @@ Card.propTypes = {
 	created: PropTypes.string,
 	edited: PropTypes.string,
 	url: PropTypes.string,
-	link: PropTypes.string
+	link: PropTypes.string,
+	img: PropTypes.string,
+	match: PropTypes.object
 };

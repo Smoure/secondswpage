@@ -21,7 +21,7 @@ export const Navbar = () => {
 				<ul className="navbar-nav">
 					<li className="nav-item active">
 						<Link to={"/"} className="nav-link" href="#">
-							Home
+							Species
 						</Link>
 					</li>
 					<li className="nav-item">
